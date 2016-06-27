@@ -8,13 +8,15 @@
 
 关于环境配置导入工程文件不会的我也可以写个教程。ps如果需要的话请联系我
 
+[安装程序下载](http://gh60.cn/upload/setup.exe)
+
 软件截图
 
 ![](view.png)
 
 ## 参考资料
 
-* [OpenCV3编程入门_毛星云编著_电子工业出版]()
+* [OpenCV3编程入门_毛星云编著_电子工业出版](http://gh60.cn/upload/OpenCV3.pdf)
 * [官方文档]()
 * [中文文档](http://www.opencv.org.cn/opencvdoc/2.3.2/html/doc/tutorials/tutorials.html)
 * [参考项目]()
