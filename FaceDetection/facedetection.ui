@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FaceDetectionClass</class>
+ <widget class="QMainWindow" name="FaceDetectionClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DFace</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="facedetection.qrc">
+    <normaloff>:/FaceDetection/res/a128.ico</normaloff>:/FaceDetection/res/a128.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="horizontalSpacing">
+       <number>0</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>3</number>
+      </property>
+      <item row="5" column="3">
+       <widget class="QPushButton" name="bt_open">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="facedetection.qrc">
+          <normaloff>:/FaceDetection/res/actions/add.png</normaloff>:/FaceDetection/res/actions/add.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="8">
+       <widget class="QLabel" name="label_time">
+        <property name="styleSheet">
+         <string notr="true">font: 75 9pt &quot;YaHei Consolas Hybrid&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Frame Num: 0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="9">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>1</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widget_1" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:qconicalgradient(cx:1, cy:0, angle:90, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255))
+
+</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_src">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: italic 12pt &quot;微软雅黑&quot;;</string>
+             </property>
+             <property name="text">
+              <string>No Video</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_2" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:90, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(0, 0, 0, 255))</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_out">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: italic 12pt &quot;微软雅黑&quot;;</string>
+             </property>
+             <property name="text">
+              <string>No Video</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="margin">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="5" column="1">
+       <spacer name="horizontalSpacer_1">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="2" colspan="6">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="styleSheet">
+         <string notr="true">font: 75 9pt &quot;YaHei Consolas Hybrid&quot;;</string>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="textVisible">
+         <bool>true</bool>
+        </property>
+        <property name="textDirection">
+         <enum>QProgressBar::TopToBottom</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="6">
+       <widget class="QPushButton" name="bt_stop">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="facedetection.qrc">
+          <normaloff>:/FaceDetection/res/actions/gtk-media-pause.png</normaloff>:/FaceDetection/res/actions/gtk-media-pause.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="8">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="label_rate">
+        <property name="styleSheet">
+         <string notr="true">font: 75 9pt &quot;YaHei Consolas Hybrid&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Detection Time: 0 ms</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="7">
+       <widget class="QPushButton" name="bt_fast_dt">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="facedetection.qrc">
+          <normaloff>:/FaceDetection/res/actions/gnome-run.png</normaloff>:/FaceDetection/res/actions/gnome-run.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="5">
+       <widget class="QPushButton" name="bt_process">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="facedetection.qrc">
+          <normaloff>:/FaceDetection/res/actions/gtk-media-play-ltr.png</normaloff>:/FaceDetection/res/actions/gtk-media-play-ltr.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="bt_close">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="facedetection.qrc">
+          <normaloff>:/FaceDetection/res/actions/gtk-close.png</normaloff>:/FaceDetection/res/actions/gtk-close.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" colspan="6">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+    <addaction name="actionLoad_cascade_File"/>
+    <addaction name="actionLoad_nestedCascade_File"/>
+    <addaction name="actionTurn_on_recognition"/>
+    <addaction name="actionTurn_off_recognition"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_muti_files"/>
+    <addaction name="actionCamera"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <widget class="QMenu" name="menuTrain">
+    <property name="title">
+     <string>Train</string>
+    </property>
+    <addaction name="actionAuto_Images_Train"/>
+    <addaction name="actionImages_Train"/>
+    <addaction name="actionCamera_Train"/>
+    <addaction name="actionVideo_Trainn"/>
+   </widget>
+   <widget class="QMenu" name="menuTracking">
+    <property name="title">
+     <string>Tracking</string>
+    </property>
+    <addaction name="actionCamera_Mode"/>
+    <addaction name="actionVideo_Mode"/>
+   </widget>
+   <widget class="QMenu" name="menuClear">
+    <property name="title">
+     <string>ClearAndEnd</string>
+    </property>
+    <addaction name="actionClear_Screen"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSetting"/>
+   <addaction name="menuTrain"/>
+   <addaction name="menuTracking"/>
+   <addaction name="menuClear"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionLoad_cascade_File">
+   <property name="text">
+    <string>Change cascade File</string>
+   </property>
+  </action>
+  <action name="actionLoad_nestedCascade_File">
+   <property name="text">
+    <string>Change nestedCascade File</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save Path</string>
+   </property>
+  </action>
+  <action name="actionOpen_muti_files">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionCamera_Train">
+   <property name="text">
+    <string>Save Camera faces</string>
+   </property>
+  </action>
+  <action name="actionVideo_Trainn">
+   <property name="text">
+    <string>Save Video faces</string>
+   </property>
+  </action>
+  <action name="actionSet_Label">
+   <property name="text">
+    <string>Set Label</string>
+   </property>
+  </action>
+  <action name="actionImages_Train">
+   <property name="text">
+    <string>Train With CSV</string>
+   </property>
+  </action>
+  <action name="actionTurn_on_recognition">
+   <property name="text">
+    <string>Turn on recognition</string>
+   </property>
+  </action>
+  <action name="actionTurn_off_recognition">
+   <property name="text">
+    <string>Turn off recognition</string>
+   </property>
+  </action>
+  <action name="actionCamera_Mode">
+   <property name="text">
+    <string>Camera Mode</string>
+   </property>
+  </action>
+  <action name="actionVideo_Mode">
+   <property name="text">
+    <string>Video Mode</string>
+   </property>
+  </action>
+  <action name="actionAuto_Images_Train">
+   <property name="text">
+    <string>Auto Images Train</string>
+   </property>
+  </action>
+  <action name="actionCamera">
+   <property name="text">
+    <string>Camera</string>
+   </property>
+  </action>
+  <action name="actionClear_Screen">
+   <property name="text">
+    <string>Clear Screen And End</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="facedetection.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>img_process()</slot>
+  <slot>img_open()</slot>
+  <slot>file_open()</slot>
+ </slots>
+</ui>
